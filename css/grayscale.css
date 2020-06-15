@@ -90,7 +90,7 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/offline_01.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../video/200615_showreel_v01.mp4");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -318,6 +318,16 @@ footer {
   left: 0
 }
 
+.view .mask-large,
+.view .content {
+  width: 1120px;
+  height: 500px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+
 .view img {
   display: block;
   position: relative
@@ -349,7 +359,8 @@ footer {
   transition: all 0.15s ease-in-out;
 }
 
-.project-panel .mask {
+.project-panel .mask,
+.project-panel .mask-large{
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.44);
   transition: all 0.15s ease-in-out;
@@ -369,7 +380,8 @@ footer {
   transform: scale(1.04);
 }
 
-.project-panel:hover .mask {
+.project-panel:hover .mask,
+.project-panel:hover .mask-large{
   opacity: 1;
 }
 
@@ -382,5 +394,84 @@ footer {
 
 .project-panel:hover p {
   transition-delay: 0.15s ease-in-out;
+}
+
+.profile-pic img {
+    width: 50%;
+    height: 50%;
+    margin-right: 0;
+    padding-right: auto;
+}
+
+.video-container {
+    
+}
+
+.gradient{
+    position:absolute;
+    background-image: -webkit-linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%));
+    top: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.video{
+    position: relative;
+    text-align: center;
+    
+    object-fit: cover;
+    z-index: -1;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.video-overlay{
+    position:absolute;
+    height: auto;
+    left:50%;
+    transform: translate(-50%, 50%);
+    
+}
+
+.video-overlay h1 {
+  font-family: 'Varela Round';
+  font-size: 3rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.video-overlay h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .video-overlay h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .video-overlay {
+    height: 100vh;
+    padding: 0;
+  }
+  .video-overlay h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+  .video-overlay h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
 }
 
