@@ -163,7 +163,7 @@
 }
 
 .about-section {
-  padding-top: 10rem;
+  padding-top: 5rem;
   background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
 }
 
@@ -172,7 +172,7 @@
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 
 .projects-section .featured-text {
@@ -295,3 +295,92 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+
+/*CUSTOM*/
+
+.view {
+
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  cursor: default;
+}
+
+.view .mask,
+.view .content {
+  width: 540px;
+  height: 306px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+
+.view img {
+  display: block;
+  position: relative
+}
+
+.view h2 {
+  font-family: 'Varela Round';
+  color: #fff;
+  text-align: center;
+  position: relative;
+    
+  font-size: 24px;
+  padding: 10px;
+  /*background: rgba(0, 0, 0, 0.8);*/
+  margin: 5rem 0 2rem 0
+}
+
+.view p {
+    font-family: 'Varela Round';
+  font-size: 14px;
+  position: relative;
+  color: #fff;
+  padding: 0px 20px 0px;
+  text-align: center
+}
+
+.project-panel img {
+  /*1*/
+  transition: all 0.15s ease-in-out;
+}
+
+.project-panel .mask {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.44);
+  transition: all 0.15s ease-in-out;
+}
+
+.project-panel h2 {
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.project-panel p {
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+}
+
+.project-panel:hover img {
+  transform: scale(1.04);
+}
+
+.project-panel:hover .mask {
+  opacity: 1;
+}
+
+.project-panel:hover h2,
+.project-panel:hover p,
+.project-panel:hover a.info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.project-panel:hover p {
+  transition-delay: 0.15s ease-in-out;
+}
+
